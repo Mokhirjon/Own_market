@@ -26,5 +26,5 @@ urlpatterns = [
     path('Clothes/',include('Clothes.urls')),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('sold_things/',include('sold_things.urls'))
+    path('Sold_Things/',include('Sold_Things.urls'))
 ]

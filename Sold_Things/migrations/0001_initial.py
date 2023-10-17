@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Sold_out',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('sold_things', models.CharField(default='', max_length=24)),
+                ('Sold_CPSH', models.CharField(default='', max_length=24)),
                 ('sold_clothes', models.TextField()),
                 ('sold_pants', models.TextField()),
                 ('sold_shoes', models.TextField()),

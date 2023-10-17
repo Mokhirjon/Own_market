@@ -1,7 +1,9 @@
 from django.contrib import admin
 from .models import Pants
+from config.forms import  PantsForm
 # Register your models here.
 class PantsAdmin(admin.ModelAdmin):
+    form = PantsForm
     list_display = ("pants", 'image', 'pants_price', 'pants_brand', 'about_pants',
                     'pants_colour', 'pants_size', 'pants_year_created', 'pants_made_in_from',
                   'if_sold', 'pants_for_which_season', 'Contact_with_admin')

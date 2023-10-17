@@ -1,7 +1,9 @@
 from django.contrib import admin
 from .models import Shopping_center,Shoes
+from config.forms import ShoesForm
 # Register your models here.
 class ShoesAdmin(admin.ModelAdmin):
+    form = ShoesForm
     list_display = ("shoes", 'image', 'price', 'brand', 'about_shoes',
                     'colour', 'size', 'year_created', 'made_in_from',
                   'if_sold', 'for_which_season', 'Contact_with_admin')
