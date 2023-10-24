@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from rest_framework_simplejwt.views import TokenVerifyView, TokenObtainPairView, TokenRefreshView
+from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,3 +29,13 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('Sold_Things/',include('Sold_Things.urls'))
 ]
+urlpatterns += i18n_patterns(
+    path('api/Pants/', include('Pants.urls')),
+    path('api/Shopping_center/', include('Shopping_center.urls')),
+    path('api/Clothes/', include('Clothes.urls'))
+)
+
+
+
+
+
